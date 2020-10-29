@@ -27,28 +27,28 @@ Very brief overview for creating an EC2 instance and connecting remotely through
 
 1. Take note of public IP address for the created instance eg:ec2-54-88-60-6.compute-1.amazonaws.com or 54.88.60.6. If an elastic IP has not been set then these could change and need to be updated
 2. Check the permissions of the key that was downloaded in the previous section step 10. Navigate to where the key was saved in your system then:
-```
-:~/key$ ls -l
-total 8
--rwx------ 1 colforst colforst 1700 Oct 27 13:17 aws_educate.pem
--rwx------ 1 colforst colforst 1692 Oct 26 15:56 duck.pem
-:~/key$
-```
-This checks the permissions of the key. Both keys here have permissions set for only the owner which is what we want. The command required to set these permissions for duck for example is:
+    ```
+    :~/key$ ls -l
+    total 8
+    -rwx------ 1 colforst colforst 1700 Oct 27 13:17 aws_educate.pem
+    -rwx------ 1 colforst colforst 1692 Oct 26 15:56 duck.pem
+    :~/key$
+    ```
+    This checks the permissions of the key. Both keys here have permissions set for only the owner which is what we want. The command required to set these permissions for duck for example is:
 
-```
-:~/key$ chmod 700 duck.pem
-```
+    ```
+    :~/key$ chmod 700 duck.pem
+    ```
 3. Now we can use this key to connect to our instance. You can either be in the folder that the key is in or type the absolute path. For example:
 
    This command can be used with the absolute path
-```
-:~$ ssh -i /home/colforst/key/duck.pem ubuntu@54.88.60.6
-```
-   Or this command can be used if in the folder
-```
-:~/key$ ssh -i duck.pem ubuntu@54.88.60.6
-```
+    ```
+    :~$ ssh -i /home/colforst/key/duck.pem ubuntu@54.88.60.6
+    ```
+    Or this command can be used if in the folder
+    ```
+    :~/key$ ssh -i duck.pem ubuntu@54.88.60.6
+    ```
    Also note ubuntu is the user name of the instance we created
 
 4. OPTIONAL ONLY - if we are always connecting to an instance we can set a config file to enable us to write a shortcut to connect. It is basically the steps as outlined previously but put into a script. 
@@ -60,7 +60,7 @@ This checks the permissions of the key. Both keys here have permissions set for 
    .   .bash_history  .bashrc  .config     .ipython  .jupyter    .local       .mume     .psql_history  .python_history  .sudo_as_admin_successful  .vscode-server  .xsession         key
    ..  .bash_logout   .cache   .gitconfig  .john     .landscape  .motd_shown  .profile  .pylint.d      .ssh             .viminfo                   .wget-hsts      .xsession#enable
    ```
-   I have used the ls command to show hidden files and we can see the .ssh file is in there.
+   I have used the ls -a command to show hidden files and we can see the .ssh file is in there.
    2. Create the config file in the .ssh folder
    ```
    :~$ cd .ssh
