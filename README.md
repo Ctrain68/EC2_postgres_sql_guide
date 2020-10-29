@@ -5,20 +5,20 @@ Very brief overview for creating an EC2 instance and connecting remotely through
 ## Create EC2 instance
 
 1. Choose Ubuntu Server 64 bit
-![Ubuntu Sever Selection](docs/sever_selection.jpg)
+![Ubuntu Sever Selection](docs/sever_selection.JPG)
 2. Select appropriate tier (t2 micro free in this case) 
-![select tier](docs/configuration_size.jpg)
+![select tier](docs/configuration_size.JPG)
 3. Select Next Configure Instance Details
 4. Select Next Add Storage (unless custom settings required)
 5. Storage has been left as the default in this instance
 6. Select Next Add tags
 7. Tags have been left as default in this instance
 8. Select next and you should now be on the security page
-![Security Page](docs/security_page.jpg)
+![Security Page](docs/security_page.JPG)
 9. Next add a rule
-![Security Add](docs/security_page_add_rule.jpg) 
+![Security Add](docs/security_page_add_rule.JPG) 
 10.  Rule type PostgresSQL, Source set to 0.0.0.0/0
-![Security Postgres](docs/security_page_postgres.jpg)
+![Security Postgres](docs/security_page_postgres.JPG)
 11. Select Review and Launch
 12. Choose key pair or existing key pair. Make sure you are of possesion of the key if choosing new key pair.
 13. Launch Instance
