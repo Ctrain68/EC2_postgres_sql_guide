@@ -12,7 +12,9 @@ Very brief overview for creating an EC2 instance and connecting remotely through
 4. Select Next Add Storage (unless custom settings required)
 5. Storage has been left as the default in this instance
 6. Select Next Add tags
-7. Tags have been left as default in this instance
+![select tags](docs/tags.JPG)
+7. As a minimum a tag with a key value of name should be specified to identify your instance
+![select tag](docs/tags2.JPG)
 8. Select next and you should now be on the security page
 ![Security Page](docs/security_page.JPG)
 9. Next add a rule
